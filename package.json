@@ -3,12 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "predev": "rm -rf .cache/* && rm -rf dist/* && cp -r static dist/static",
-    "dev": "parcel index.html",
-
-    "prebuild": "rm -rf .cache/* && rm -rf dist/* && cp -r static dist/static",
-    "build": "parcel build index.html",
-
+    "predev": "rm -rf .cache/* && rm -rf dist/*",
+    "dev": "cpx static/**/* dist/static -w & parcel index.html",
+    "prebuild": "rm -rf .cache/* && rm -rf dist/*",
+    "build": "cp -r static dist/static && parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
@@ -22,6 +20,7 @@
     "babel-eslint": "^8.0.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
+    "cpx": "^1.5.0",
     "eslint": "^4.17.0",
     "eslint-plugin-vue": "^4.2.0",
     "husky": "^0.15.0-rc.8",

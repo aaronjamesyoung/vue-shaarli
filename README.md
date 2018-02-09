@@ -44,6 +44,7 @@ npx parcel build index.html
 Over time I'm hoping to work further with this to:
 
 * better figure out static asset handling from within .vue components (https://github.com/BoltDoggy/parcel-plugin-vue/issues/5)
+  * This is underway; at this point, any assets in /static will be copied to /dist/static while in dev mode or when building
 * probably make it better, but who knows
 
 This is currently mainly for my use but if you want to use it or tell me what I did wrong, that'd be much appreciated. Thanks!

@@ -1,5 +1,5 @@
 .cache
 dist
 node_modules
-package-lock.json # yeah i know
+package-lock.json
 *.log
