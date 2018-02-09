@@ -27,16 +27,10 @@ Develop by running one of these two commands:
 npm run dev
 ```
 
-or
-
-```
-npx parcel index.html # does the same as above
-```
-
 Build for production:
 
 ```
-npx parcel build index.html
+npm run build
 ```
 
 ## Next
