@@ -1,11 +1,5 @@
 .cache
 dist
 node_modules
-#.gitignore
-#index.html
-#index.js
-#index.vue
-#package-lock.json
-#package.json
-#README.md
+package-lock.json # yeah i know
 *.log
