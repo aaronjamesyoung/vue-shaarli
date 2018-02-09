@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "rm -rf .cache && rm -rf dist && parcel index.html",
+    "predev": "rm -rf .cache/* && rm -rf dist/* && cp -r static dist/static",
+    "dev": "parcel index.html",
+
+    "prebuild": "rm -rf .cache/* && rm -rf dist/* && cp -r static dist/static",
+    "build": "parcel build index.html",
+
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
