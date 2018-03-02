@@ -1,12 +1,13 @@
 {
-  "name": "ajy-vue-parcel-template",
-  "version": "1.0.0",
-  "description": "",
+  "name": "vue-shaarli",
+  "version": "0.0.1",
+  "description": "A simple Shaarli front end using Vue and the Shaarli API",
   "scripts": {
     "predev": "rm -rf .cache/* && rm -rf dist/*",
     "dev": "cpx static/**/* dist/static -w & parcel index.html",
     "prebuild": "rm -rf .cache/* && rm -rf dist/*",
-    "build": "cp -r static dist/static && parcel build index.html",
+    "build":
+      "cp -r static dist/static && parcel build index.html --public-url '.'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
@@ -32,6 +33,7 @@
     "pretty-quick": "^1.3.0"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "vue": "^2.5.9",
     "vue-router": "^3.0.1"
   }
