@@ -1,6 +1,6 @@
 # vue-shaarli
 
-A new way to browse your [Shaarli](https://github.com/shaarli/Shaarli) bookmarks.
+A new way to browse your [Shaarli](https://github.com/shaarli/Shaarli) bookmarks using a simple Vue.js front end.
 
 On pageload, it lists **all** your Shaarli bookmarks. By default they will be sorted A-Z, but you
 can choose to sort by Newest as well.
@@ -33,23 +33,17 @@ npm install
 Configuration is a work in progress and future updates may require you to redo your configuration
 if you keep up.
 
-At this point, there are just a couple files you need to edit.
+At this point, there are just a couple files you need to edit:
+
+* `src/config.js.sample` - Edit as indicated and rename to `src/config.js`
+* `static/server-config.php.sample` - Edit as indicated and rename to `static/server-config.php`
 
 ## Build for production:
 
 ```
+mkdir dist
 npm run build
 ```
 
-After building, you'll have a `dist/` directory. Copy the contents of this directory wherever you
+After building, you'll have a few things in your `dist/` directory. Copy the contents of this directory wherever you
 would like. Remember your server needs to be able to process PHP scripts.
-
-## Next
-
-Over time I'm hoping to work further with this to:
-
-* better figure out static asset handling from within .vue components (https://github.com/BoltDoggy/parcel-plugin-vue/issues/5)
-  * This is underway; at this point, any assets in /static will be copied to /dist/static while in dev mode or when building
-* probably make it better, but who knows
-
-This is currently mainly for my use but if you want to use it or tell me what I did wrong, that'd be much appreciated. Thanks!
