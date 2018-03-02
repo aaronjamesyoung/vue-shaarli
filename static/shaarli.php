@@ -42,7 +42,7 @@ function getInfo($baseUrl, $secret) {
 
 function getLinks($baseUrl, $secret) {
   $token = generateToken($secret);
-  $endpoint = rtrim($baseUrl, '/') . '/api/v1/links?limit=all';
+  $endpoint = rtrim($baseUrl, '/') . '/api/v1/links?limit=all&visibility=public';
 
   $headers = [
       'Content-Type: text/plain; charset=UTF-8',

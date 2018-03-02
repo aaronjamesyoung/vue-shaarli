@@ -2,7 +2,9 @@
 
 A new way to browse your [Shaarli](https://github.com/shaarli/Shaarli) bookmarks using a simple Vue.js front end.
 
-On pageload, it lists **all** your Shaarli bookmarks. By default they will be sorted A-Z, but you
+Demo: <https://hs.ajy.co>
+
+On pageload, it lists **all** your public Shaarli bookmarks. By default they will be sorted A-Z, but you
 can choose to sort by Newest as well.
 
 You can then type anything (link name, description, url, or tags) in the search bar and the links
@@ -15,7 +17,8 @@ This is great for a browser start page.
 The Vue app makes a request to a PHP script that I've bundled in the `static` folder of this
 repository. That PHP script will contain your Shaarli URL and API key. It implements one method of
 the Shaarli API (getLinks) and simply asks Shaarli for all your links. This script will likely
-reside at a publicly-accessible URL, so someone could use it to get a list of your Shaarli links.
+reside at a publicly-accessible URL, so someone could use it to get a list of your public (not private)
+Shaarli links (which is the same that they would see if accessing your Shaarli install directly).
 
 Since you're running the PHP script on a server, your Shaarli API key will not be readable to the
 world and no other API functionality is present in the script.
