@@ -3,11 +3,7 @@ import Router from "vue-router";
 
 import LinkList from "../components/LinkList";
 
-const config = {
-  shaarliUrl: "https://example.com/shaarli/",
-  defaultSort: "title",
-  shaarliScriptUrl: "/static/shaarli.php"
-};
+import config from "../config";
 
 Vue.use(Router);
 

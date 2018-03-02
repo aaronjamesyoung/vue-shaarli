@@ -1,11 +1,6 @@
 <?php
-// Move this config somewhere else??
-
-// **** CONFIG **** //
-$baseUrl = 'https://example.com/shaarli';
-$secret = '12345abcdef';
-// **** End Config **** //
-
+// Config
+include('server-config.php');
 
 function base64url_encode($data) {
   return rtrim(strtr(base64_encode($data), '+/', '-_'), '=');
